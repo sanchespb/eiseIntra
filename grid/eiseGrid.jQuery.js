@@ -1703,6 +1703,7 @@ eiseGrid.prototype.fillRow = function($tr, row ){
             return true; // continue
 
         if( props.type == 'order' && !row[field] ){
+            var $trAfter = oGrid.tableContainer.find('tbody').last();
             var ord = ($trAfter.hasClass('eg-data')
                     ? parseInt($trAfter.find('.eg-order').text().replace(/[^0-9]+/gi, '')) 
                     : 0)+1;
